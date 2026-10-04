@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Countdown } from "@/components/countdown";
+import { PhotoGallery } from "@/components/photo-gallery";
 import { PublicSummary } from "@/components/public-summary";
 import { EVENT } from "@/lib/event";
 
@@ -7,61 +8,121 @@ export default function Home() {
   return (
     <main>
       <section className="hero section">
-        <p className="eyebrow">23 OUT · YCSA · SÃO PAULO</p>
-        <h1>Mari Dias na Octoberfest YCSA 26</h1>
-        <p className="lead">
-          Comida típica, cerveja, amigos e Oswaldorfs no palco. A festa começa às 13h. A banda toca às 17h.
-        </p>
-        <div className="actions">
-          <Link className="button primary" href="/lista/">Entrar na Lista da Banda</Link>
-          <a className="button ghost" href={EVENT.officialPost} target="_blank" rel="noreferrer">
-            Post oficial do evento
-          </a>
+        <div className="hero-glow" aria-hidden="true" />
+        <div className="hero-content">
+          <p className="eyebrow">23 OUT · YCSA · SÃO PAULO</p>
+          <h1>Mari Dias & Os Waldorfs na Octoberfest YCSA 26</h1>
+          <p className="lead">
+            Uma tarde de festa, comida típica e cerveja. Às 17h, Mari Dias & Os Waldorfs sobem ao palco.
+          </p>
+
+          <div className="event-chips" aria-label="Informações do evento">
+            <span>23 de outubro</span>
+            <span>A partir das 13h</span>
+            <span>Banda às 17h</span>
+          </div>
+
+          <div className="actions">
+            <Link className="button primary" href="/lista/">Entrar na Lista da Banda</Link>
+            <a className="button ghost" href={EVENT.officialPost} target="_blank" rel="noreferrer">
+              Ver post oficial
+            </a>
+          </div>
+        </div>
+
+        <a
+          className="hero-photo-link"
+          href={EVENT.bandPhotoPost}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Ver fotos de Mari Dias & Os Waldorfs no Instagram"
+        >
+          <span>FOTOS DA BANDA</span>
+          <strong>Mari Dias & Os Waldorfs ↗</strong>
+        </a>
+      </section>
+
+      <section className="metric-wrap">
+        <div className="section metric">
+          <p className="eyebrow">LISTA DA BANDA</p>
+          <p>Já estão confirmados</p>
+          <PublicSummary />
+          <span>pessoas</span>
         </div>
       </section>
 
-      <section className="section metric">
-        <p>Já estão na Lista da Banda</p>
-        <PublicSummary />
-        <span>pessoas</span>
+      <section className="section info-grid">
+        <article className="info-card">
+          <span className="info-number">01</span>
+          <h2>Inclua todo mundo.</h2>
+          <p>Adultos e crianças precisam estar na lista. Você pode adicionar várias pessoas de uma vez.</p>
+        </article>
+        <article className="info-card">
+          <span className="info-number">02</span>
+          <h2>CPF é opcional.</h2>
+          <p>Se informado, o CPF precisa ser válido. Quem não tiver CPF pode entrar normalmente na lista.</p>
+        </article>
+        <article className="info-card accent-card">
+          <span className="info-number">03</span>
+          <h2>Na portaria, diga “LISTA DA BANDA”.</h2>
+          <p>É essa frase que identifica os nomes enviados por aqui.</p>
+        </article>
       </section>
 
-      <section className="section grid-2">
-        <div>
+      <PhotoGallery />
+
+      <section className="section schedule-section">
+        <div className="section-heading">
           <p className="eyebrow">PROGRAMA</p>
           <h2>Chegue cedo. Fique até o último acorde.</h2>
         </div>
-        <div className="timeline">
-          <p><b>13:00</b> · início da Octoberfest, comidas típicas e cerveja</p>
-          <p><b>17:00</b> · Mari Dias & Oswaldorfs</p>
+        <div className="schedule-grid">
+          <article>
+            <time>13:00</time>
+            <div>
+              <strong>Começa a Octoberfest</strong>
+              <p>Comidas típicas, cerveja e festa no YCSA.</p>
+            </div>
+          </article>
+          <article>
+            <time>17:00</time>
+            <div>
+              <strong>Mari Dias & Os Waldorfs</strong>
+              <p>A banda sobe ao palco para fechar a tarde com música.</p>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section className="section panel">
-        <p className="eyebrow">IMPORTANTE NA PORTARIA</p>
-        <h2>Diga que seu nome está na “LISTA DA BANDA”.</h2>
-        <p>Crianças acompanhadas também precisam ser incluídas na lista.</p>
+      <section className="section final-cta">
+        <p className="eyebrow">ÚLTIMA CHAMADA</p>
+        <h2>Seu nome na Lista da Banda.</h2>
+        <p>Garanta os nomes antes do encerramento da lista.</p>
+        <Link className="button primary" href="/lista/">Colocar nomes na lista</Link>
       </section>
 
-      <section className="section grid-2">
+      <section className="section links-section">
         <div>
           <p className="eyebrow">MAIS FESTA</p>
-          <h2>Veja a banda e acompanhe o clube.</h2>
+          <h2>Acompanhe a banda e o clube.</h2>
         </div>
         <div className="link-stack">
-          <a href={EVENT.bandInstagram} target="_blank" rel="noreferrer">Instagram da Mari Dias / Oswaldorfs ↗</a>
+          <a href={EVENT.bandInstagram} target="_blank" rel="noreferrer">Instagram de Mari Dias & Os Waldorfs ↗</a>
           <a href={EVENT.clubInstagram} target="_blank" rel="noreferrer">Instagram do Yacht Club Santo Amaro ↗</a>
         </div>
       </section>
 
       <div className="sticky-cta">
         <Link href="/lista/">
-          <b>Colocar nomes na lista</b>
+          <b>Entrar na Lista da Banda</b>
           <Countdown />
         </Link>
       </div>
 
-      <footer><Link href="/admin/">Admin</Link></footer>
+      <footer>
+        <span>Mari Dias & Os Waldorfs · Octoberfest YCSA 26</span>
+        <Link href="/admin/">Admin</Link>
+      </footer>
     </main>
   );
 }
