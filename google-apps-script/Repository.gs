@@ -52,6 +52,11 @@ function insertPeople_(people) {
   try {
     const sheet = getPeopleSheet_();
     const existing = listPeople_();
+
+    if (existing.length >= MAX_PEOPLE) {
+      throw new Error("A Lista da Banda atingiu o limite de " + MAX_PEOPLE + " pessoas.");
+    }
+
     const names = new Set(existing.map((person) => person.normalizedName));
     const cpfs = new Set(existing.map((person) => person.cpfNormalized).filter(Boolean));
     let duplicateCount = 0;
@@ -84,6 +89,13 @@ function insertPeople_(people) {
         new Date(),
       ]);
     });
+
+    if (existing.length + rows.length > MAX_PEOPLE) {
+      const remaining = MAX_PEOPLE - existing.length;
+      throw new Error(
+        "A Lista da Banda comporta no máximo " + MAX_PEOPLE + " pessoas. Restam " + remaining + " vaga(s).",
+      );
+    }
 
     if (rows.length) {
       sheet.getRange(sheet.getLastRow() + 1, 1, rows.length, PEOPLE_HEADERS.length).setValues(rows);
