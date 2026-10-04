@@ -25,7 +25,11 @@ export default function AdminPage() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    setToken(sessionStorage.getItem("adminIdToken") ?? "");
+    const timer = window.setTimeout(() => {
+      setToken(sessionStorage.getItem("adminIdToken") ?? "");
+    }, 0);
+
+    return () => window.clearTimeout(timer);
   }, []);
 
   useEffect(() => {
