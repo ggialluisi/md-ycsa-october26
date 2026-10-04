@@ -18,7 +18,8 @@ declare global {
   }
 }
 
-const AUTH_ERROR = /Sessão inválida|Acesso não autorizado|Login necessário/i;\nconst GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ?? "";
+const AUTH_ERROR = /Sessão inválida|Acesso não autorizado|Login necessário/i;
+const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ?? "";
 
 export default function AdminPage() {
   const [token, setToken] = useState("");
@@ -37,7 +38,6 @@ export default function AdminPage() {
   useEffect(() => {
     if (!token) return;
 
-    setError("");
     api.getAdminPeople(token)
       .then((data) => setPeople(data.people))
       .catch((err) => {
