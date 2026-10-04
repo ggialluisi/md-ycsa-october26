@@ -2,6 +2,7 @@ export type GalleryItem =
   | {
       kind: "post";
       url: string;
+      embedUrl: string;
       label: string;
       caption: string;
       featured?: boolean;
@@ -17,13 +18,15 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     kind: "post",
     url: "https://www.instagram.com/p/DdNIT7vA_11/",
+    embedUrl: "https://www.instagram.com/p/DdNIT7vA_11/embed/",
     label: "Mari Dias & Os Waldorfs",
-    caption: "A banda em cena — abra o post para ver o registro completo.",
+    caption: "A banda em cena.",
     featured: true,
   },
   {
     kind: "post",
     url: "https://www.instagram.com/p/DeCdz9IgM0h/",
+    embedUrl: "https://www.instagram.com/p/DeCdz9IgM0h/embed/",
     label: "Octoberfest YCSA 26",
     caption: "O post oficial da festa deste ano.",
   },
