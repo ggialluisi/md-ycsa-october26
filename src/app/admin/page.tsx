@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-const AUTH_ERROR = /Sessão inválida|Acesso não autorizado|Login necessário/i;
+const AUTH_ERROR = /Sessão inválida|Acesso não autorizado|Login necessário/i;\nconst GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ?? "";
 
 export default function AdminPage() {
   const [token, setToken] = useState("");
@@ -56,11 +56,7 @@ export default function AdminPage() {
   useEffect(() => {
     if (token) return;
 
-    const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
-    if (!clientId) {
-      setError("Login administrativo ainda não configurado.");
-      return;
-    }
+    if (!GOOGLE_CLIENT_ID) return;
 
     const script = document.createElement("script");
     script.src = "https://accounts.google.com/gsi/client";
@@ -70,7 +66,7 @@ export default function AdminPage() {
       if (!target || !window.google) return;
 
       window.google.accounts.id.initialize({
-        client_id: clientId,
+        client_id: GOOGLE_CLIENT_ID,
         callback: ({ credential }) => {
           sessionStorage.setItem("adminIdToken", credential);
           setError("");
