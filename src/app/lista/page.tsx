@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { formatCpf, isValidCpf } from "@/lib/cpf";
 import { formatPersonName } from "@/lib/names";
 import { EVENT } from "@/lib/event";
@@ -21,7 +21,21 @@ export default function ListPage() {
   const [rows, setRows] = useState<Row[]>([newRow(1)]);
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
-  const closed = useMemo(() => Date.now() >= new Date(EVENT.registrationDeadline).getTime(), []);
+  const [closed, setClosed] = useState(false);
+
+  useEffect(() => {
+    const updateClosed = () => {
+      setClosed(Date.now() >= new Date(EVENT.registrationDeadline).getTime());
+    };
+
+    const initialTimer = window.setTimeout(updateClosed, 0);
+    const interval = window.setInterval(updateClosed, 30000);
+
+    return () => {
+      window.clearTimeout(initialTimer);
+      window.clearInterval(interval);
+    };
+  }, []);
 
   const update = (id: number, patch: Partial<Row>) =>
     setRows((current) => current.map((row) => row.localId === id ? { ...row, ...patch } : row));
