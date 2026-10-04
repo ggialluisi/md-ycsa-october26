@@ -1,5 +1,5 @@
 export type GalleryItem = {
-  src?: string;
+  localImage?: "band" | "mari";
   url: string;
   label: string;
   caption: string;
@@ -8,15 +8,17 @@ export type GalleryItem = {
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
-    url: "https://www.instagram.com/p/DdNIT7vA_11/",
+    localImage: "band",
+    url: "https://www.instagram.com/maridias.oswaldorfs/",
     label: "Mari Dias & Os Waldorfs",
-    caption: "Registro da banda no Instagram.",
+    caption: "A banda reunida.",
     featured: true,
   },
   {
-    url: "https://www.instagram.com/p/DeCdz9IgM0h/",
-    label: "Octoberfest YCSA 26",
-    caption: "Post oficial da festa deste ano.",
+    localImage: "mari",
+    url: "https://www.instagram.com/maridias.oswaldorfs/",
+    label: "Mari Dias no palco",
+    caption: "Clima de show para entrar no espírito da Octoberfest.",
   },
   {
     url: "https://www.instagram.com/stories/highlights/17961879507004062/",
