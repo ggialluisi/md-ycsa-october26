@@ -18,6 +18,8 @@ declare global {
   }
 }
 
+const AUTH_ERROR = /Sessão inválida|Acesso não autorizado|Login necessário/i;
+
 export default function AdminPage() {
   const [token, setToken] = useState("");
   const [people, setPeople] = useState<AdminPerson[]>([]);
@@ -34,16 +36,31 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (!token) return;
+
+    setError("");
     api.getAdminPeople(token)
       .then((data) => setPeople(data.people))
-      .catch((err) => setError(err instanceof Error ? err.message : "Acesso negado."));
+      .catch((err) => {
+        const message = err instanceof Error ? err.message : "Acesso negado.";
+        if (AUTH_ERROR.test(message)) {
+          sessionStorage.removeItem("adminIdToken");
+          setPeople([]);
+          setToken("");
+          setError("Sua sessão expirou. Entre novamente com a conta autorizada.");
+          return;
+        }
+        setError(message);
+      });
   }, [token]);
 
   useEffect(() => {
     if (token) return;
 
     const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
-    if (!clientId) return;
+    if (!clientId) {
+      setError("Login administrativo ainda não configurado.");
+      return;
+    }
 
     const script = document.createElement("script");
     script.src = "https://accounts.google.com/gsi/client";
@@ -56,6 +73,7 @@ export default function AdminPage() {
         client_id: clientId,
         callback: ({ credential }) => {
           sessionStorage.setItem("adminIdToken", credential);
+          setError("");
           setToken(credential);
         },
       });
@@ -95,6 +113,7 @@ export default function AdminPage() {
         <p className="eyebrow">ÁREA RESTRITA</p>
         <h1>Apenas o GUBA tem acesso...</h1>
         <p>Entre com a conta Google autorizada para consultar a lista completa.</p>
+        {error && <p className="message" role="status">{error}</p>}
         <div id="google-signin" />
       </main>
     );
@@ -111,9 +130,9 @@ export default function AdminPage() {
         <button className="button ghost" onClick={logout}>Sair</button>
       </div>
 
-      {error && <p className="message">{error}</p>}
+      {error && <p className="message" role="status">{error}</p>}
 
-      <div className="tabs">
+      <div className="tabs" aria-label="Ordenação da lista">
         <button onClick={() => setOrder("alpha")} aria-pressed={order === "alpha"}>Ordem alfabética</button>
         <button onClick={() => setOrder("created")} aria-pressed={order === "created"}>Ordem de inclusão</button>
       </div>
