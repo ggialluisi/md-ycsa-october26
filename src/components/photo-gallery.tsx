@@ -35,6 +35,12 @@ const PHOTOS = [
     caption: "YCSA bombando",
     variant: "default",
   },
+  {
+    src: "/md-ycsa-october26/images/mari.jpeg",
+    label: "Mari Dias",
+    caption: "Até a Octoberfest YCSA 26!",
+    variant: "finale",
+  },
 ] as const;
 
 export function PhotoGallery() {
