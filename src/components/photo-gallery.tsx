@@ -2,13 +2,13 @@ const PHOTOS = [
   {
     src: "/md-ycsa-october26/images/mdeow.jpeg",
     label: "Mari Dias & Os Waldorfs",
-    caption: "Novo registro da banda.",
+    caption: "@christokirma nos teclados completa a formação atual",
     variant: "wide",
   },
   {
     src: "/md-ycsa-october26/images/pos-show.jpeg",
     label: "Pós-show",
-    caption: "Registro pós-show.",
+    caption: "Obrigado demais galera!",
     variant: "featured",
   },
   {
@@ -32,7 +32,7 @@ const PHOTOS = [
   {
     src: "/md-ycsa-october26/images/show-geral.jpg",
     label: "Show geral",
-    caption: "A banda tocando para a pista.",
+    caption: "YCSA bombando",
     variant: "default",
   },
 ] as const;
@@ -55,7 +55,20 @@ export function PhotoGallery() {
             <img src={photo.src} alt={photo.label} loading="lazy" />
             <figcaption className="photo-caption">
               <strong>{photo.label}</strong>
-              <small>{photo.caption}</small>
+              {photo.src.endsWith("mdeow.jpeg") ? (
+                <small>
+                  <a
+                    href="https://www.instagram.com/christokirma/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    @christokirma
+                  </a>{" "}
+                  nos teclados completa a formação atual
+                </small>
+              ) : (
+                <small>{photo.caption}</small>
+              )}
             </figcaption>
           </figure>
         ))}
