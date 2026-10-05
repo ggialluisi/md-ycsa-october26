@@ -60,8 +60,8 @@ export default function Home() {
         </article>
         <article className="info-card">
           <span className="info-number">02</span>
-          <h2>CPF é opcional.</h2>
-          <p>Se informado, o CPF precisa ser válido. Quem não tiver CPF pode entrar normalmente na lista.</p>
+          <h2>CPF para adultos.</h2>
+          <p>Para adultos, informe o CPF: ele pode ser solicitado na portaria. Crianças sem CPF podem ser incluídas normalmente.</p>
         </article>
         <article className="info-card accent-card">
           <span className="info-number">03</span>
