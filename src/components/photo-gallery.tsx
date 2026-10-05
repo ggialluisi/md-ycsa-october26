@@ -7,8 +7,8 @@ const PHOTOS = [
   },
   {
     src: "/md-ycsa-october26/images/mari-sax.jpg",
-    label: "Mari & sax",
-    caption: "Palco, banda e muita energia.",
+    label: "Confirmada: Simone Julian",
+    caption: "Super musicista nos sopros!",
     featured: false,
   },
   {
