@@ -1,6 +1,6 @@
 # Mari Dias na Octoberfest YCSA 26
 
-Aplicação estática para a “Lista da Banda” da Octoberfest YCSA em 24/11/2026.
+Aplicação estática para a “Lista da Banda” da Octoberfest YCSA em 24/10/2026.
 
 Stack: Next.js + TypeScript + GitHub Pages + Google Sheets privado + Google Apps Script + Google Identity Services.
 
