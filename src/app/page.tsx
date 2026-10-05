@@ -10,8 +10,8 @@ export default function Home() {
       <section className="hero section">
         <div className="hero-media" aria-hidden="true" />
         <div className="hero-glow" aria-hidden="true" />
+        <p className="eyebrow hero-eyebrow">23 OUT · YCSA · SÃO PAULO</p>
         <div className="hero-content">
-          <p className="eyebrow">23 OUT · YCSA · SÃO PAULO</p>
           <h1>Mari Dias & Os Waldorfs na Octoberfest YCSA 26</h1>
           <p className="lead">
             Uma tarde de festa, comida típica e cerveja. Às 17h, Mari Dias & Os Waldorfs sobem ao palco.
