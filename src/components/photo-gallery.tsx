@@ -1,4 +1,10 @@
-import { GALLERY_ITEMS } from "@/lib/gallery";
+const PHOTOS = [
+  { label: "Mari Dias & Os Waldorfs", caption: "A banda reunida.", position: "0% 0%", featured: true },
+  { label: "Pista cheia", caption: "Show com a casa em clima de festa.", position: "50% 0%" },
+  { label: "Mari & sax", caption: "Palco, banda e muita energia.", position: "100% 0%" },
+  { label: "Mari no clima", caption: "Um registro leve antes do show.", position: "0% 100%" },
+  { label: "Show geral", caption: "A banda tocando para a pista.", position: "50% 100%" },
+] as const;
 
 export function PhotoGallery() {
   return (
@@ -6,24 +12,26 @@ export function PhotoGallery() {
       <div className="section-heading">
         <p className="eyebrow">NO CLIMA DA FESTA</p>
         <h2 id="gallery-title">Mari Dias & Os Waldorfs em cena.</h2>
-        <p>
-          A galeria fotográfica está sendo atualizada com imagens locais da banda.
-        </p>
+        <p>Registros da banda e da festa, agora carregados localmente no site.</p>
       </div>
 
-      <div className="memory-grid" aria-label="Registros da banda e da Octoberfest">
-        {GALLERY_ITEMS.map((item) => (
-          <a
-            className="memory-card"
-            href={item.url}
-            target="_blank"
-            rel="noreferrer"
-            key={item.url}
+      <div className="photo-grid">
+        {PHOTOS.map((photo) => (
+          <article
+            className={photo.featured ? "photo-card featured" : "photo-card"}
+            key={photo.label}
           >
-            <span className="memory-year">{item.label}</span>
-            <span>{item.caption}</span>
-            <b>Ver referência ↗</b>
-          </a>
+            <div
+              className="photo-sprite"
+              role="img"
+              aria-label={photo.label}
+              style={{ backgroundPosition: photo.position }}
+            />
+            <span className="photo-caption">
+              <strong>{photo.label}</strong>
+              <small>{photo.caption}</small>
+            </span>
+          </article>
         ))}
       </div>
     </section>
