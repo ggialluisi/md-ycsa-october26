@@ -245,3 +245,30 @@
     padding-top:55vh;
   }
 }
+
+/* Hero title spacing and legibility */
+.hero-content{
+  transform:translateY(1.15em);
+}
+.hero h1{
+  text-shadow:
+    0 3px 18px rgba(0,0,0,.82),
+    0 1px 3px rgba(0,0,0,.95);
+}
+
+@media(max-width:850px){
+  .hero-content{
+    transform:translateY(1.35em);
+  }
+}
+
+@media(max-width:720px){
+  .hero-content{
+    transform:translateY(1.5em);
+  }
+  .hero h1{
+    text-shadow:
+      0 3px 16px rgba(0,0,0,.9),
+      0 1px 3px rgba(0,0,0,1);
+  }
+}
