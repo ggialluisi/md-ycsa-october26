@@ -337,3 +337,13 @@
     min-height:340px;
   }
 }
+
+/* Refine featured gallery image framing */
+.photo-card.wide img{
+  object-position:center 71%;
+}
+.photo-caption small a{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
