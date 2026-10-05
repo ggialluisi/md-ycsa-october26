@@ -1,38 +1,16 @@
-const PHOTOS = [
-  { label: "Mari Dias & Os Waldorfs", caption: "A banda reunida.", position: "0% 0%", featured: true },
-  { label: "Pista cheia", caption: "Show com a casa em clima de festa.", position: "50% 0%", featured: false },
-  { label: "Mari & sax", caption: "Palco, banda e muita energia.", position: "100% 0%", featured: false },
-  { label: "Mari no clima", caption: "Um registro leve antes do show.", position: "0% 100%", featured: false },
-  { label: "Show geral", caption: "A banda tocando para a pista.", position: "50% 100%", featured: false },
-] as const;
-
 export function PhotoGallery() {
   return (
     <section className="section gallery-section" aria-labelledby="gallery-title">
       <div className="section-heading">
         <p className="eyebrow">NO CLIMA DA FESTA</p>
         <h2 id="gallery-title">Mari Dias & Os Waldorfs em cena.</h2>
-        <p>Registros da banda e da festa, agora carregados localmente no site.</p>
+        <p>As fotos da banda entram aqui assim que os arquivos originais estiverem no repositório.</p>
       </div>
 
-      <div className="photo-grid">
-        {PHOTOS.map((photo) => (
-          <article
-            className={photo.featured ? "photo-card featured" : "photo-card"}
-            key={photo.label}
-          >
-            <div
-              className="photo-sprite"
-              role="img"
-              aria-label={photo.label}
-              style={{ backgroundPosition: photo.position }}
-            />
-            <span className="photo-caption">
-              <strong>{photo.label}</strong>
-              <small>{photo.caption}</small>
-            </span>
-          </article>
-        ))}
+      <div className="photo-placeholder-grid" aria-hidden="true">
+        <div className="photo-placeholder featured" />
+        <div className="photo-placeholder" />
+        <div className="photo-placeholder" />
       </div>
     </section>
   );
