@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero section">
+        <div className="hero-media" aria-hidden="true" />
         <div className="hero-glow" aria-hidden="true" />
         <div className="hero-content">
           <p className="eyebrow">23 OUT · YCSA · SÃO PAULO</p>
