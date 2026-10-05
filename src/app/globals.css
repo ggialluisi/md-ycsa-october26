@@ -289,3 +289,22 @@
     transform:translateY(6em);
   }
 }
+
+/* Keep the band-photo card clear of hero actions on mobile */
+@media(max-width:850px){
+  .hero .actions{
+    margin-bottom:0;
+  }
+  .hero-photo-link{
+    margin-top:48px;
+    clear:both;
+    align-self:stretch;
+    z-index:3;
+  }
+}
+
+@media(max-width:720px){
+  .hero-photo-link{
+    margin-top:56px;
+  }
+}
