@@ -38,7 +38,7 @@ const PHOTOS = [
   {
     src: "/md-ycsa-october26/images/mari.jpeg",
     label: "Mari Dias",
-    caption: "Até a Octoberfest YCSA 26!",
+    caption: "Nos vemos lá",
     variant: "finale",
   },
 ] as const;
