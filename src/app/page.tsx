@@ -10,7 +10,7 @@ export default function Home() {
       <section className="hero section">
         <div className="hero-media" aria-hidden="true" />
         <div className="hero-glow" aria-hidden="true" />
-        <p className="eyebrow hero-eyebrow">23 OUT · YCSA · SÃO PAULO</p>
+        <p className="eyebrow hero-eyebrow">24 NOV · YCSA · SÃO PAULO</p>
         <div className="hero-content">
           <h1>Mari Dias & Os Waldorfs na Octoberfest YCSA 26</h1>
           <p className="lead">
@@ -18,7 +18,7 @@ export default function Home() {
           </p>
 
           <div className="event-chips" aria-label="Informações do evento">
-            <span>23 de outubro</span>
+            <span>24 de novembro</span>
             <span>A partir das 13h</span>
             <span>Banda às 17h</span>
           </div>
