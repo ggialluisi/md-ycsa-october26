@@ -409,3 +409,19 @@
     object-fit:cover;
   }
 }
+
+/* Refine lead gallery photo on desktop: restore cover, reduce apparent zoom, lift eye line */
+@media(min-width:851px){
+  .photo-card.wide{
+    min-height:440px;
+    aspect-ratio:auto;
+  }
+  .photo-card.wide img{
+    object-fit:cover;
+    object-position:center 30%;
+    transform:scale(.94);
+  }
+  .photo-card.wide:hover img{
+    transform:scale(.965);
+  }
+}
