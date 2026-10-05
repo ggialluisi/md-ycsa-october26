@@ -214,3 +214,34 @@
     display:none;
   }
 }
+
+.hero-eyebrow{
+  position:absolute;
+  z-index:3;
+  top:34px;
+  left:24px;
+  margin:0;
+}
+.hero-content{
+  padding-top:31vh;
+}
+
+@media(max-width:850px){
+  .hero-eyebrow{
+    top:22px;
+    left:18px;
+  }
+  .hero-content{
+    padding-top:50vh;
+  }
+}
+
+@media(max-width:720px){
+  .hero-eyebrow{
+    top:18px;
+    left:18px;
+  }
+  .hero-content{
+    padding-top:55vh;
+  }
+}
