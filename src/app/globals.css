@@ -308,3 +308,32 @@
     margin-top:56px;
   }
 }
+
+/* Gallery highlights */
+.photo-card.wide{
+  grid-column:1 / -1;
+  min-height:500px;
+}
+.photo-card.wide img{
+  object-position:center 45%;
+}
+.photo-card.featured{
+  min-height:560px;
+  grid-row:span 2;
+}
+@media(max-width:850px){
+  .photo-card.wide{
+    grid-column:auto;
+    min-height:420px;
+  }
+  .photo-card.featured{
+    min-height:460px;
+    grid-row:auto;
+  }
+}
+@media(max-width:720px){
+  .photo-card.wide,
+  .photo-card.featured{
+    min-height:340px;
+  }
+}
