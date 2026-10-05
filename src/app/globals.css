@@ -347,3 +347,45 @@
   text-decoration:underline;
   text-underline-offset:2px;
 }
+
+/* CPF guidance */
+.cpf-note{
+  margin:0;
+  padding:12px 14px;
+  border:1px solid rgba(255,179,107,.24);
+  border-radius:12px;
+  background:rgba(255,179,107,.07);
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.45;
+}
+
+/* First gallery image: keep heads comfortably inside frame on desktop */
+@media(min-width:851px){
+  .photo-card.wide img{
+    object-position:center 18%;
+  }
+}
+
+/* Grand gallery closing image */
+.photo-card.finale{
+  grid-column:1 / -1;
+  min-height:620px;
+}
+.photo-card.finale img{
+  object-position:center 42%;
+}
+.photo-card.finale .photo-caption strong{
+  font-size:clamp(1.6rem,3vw,2.5rem);
+}
+@media(max-width:850px){
+  .photo-card.finale{
+    grid-column:auto;
+    min-height:480px;
+  }
+}
+@media(max-width:720px){
+  .photo-card.finale{
+    min-height:380px;
+  }
+}
