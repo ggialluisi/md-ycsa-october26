@@ -37,8 +37,8 @@ const PHOTOS = [
   },
   {
     src: "/md-ycsa-october26/images/mari.jpeg",
-    label: "Mari Dias",
-    caption: "Nos vemos lá",
+    label: "Nos vemos lá!",
+    caption: "",
     variant: "finale",
   },
 ] as const;
@@ -73,7 +73,7 @@ export function PhotoGallery() {
                   nos teclados completa a formação atual
                 </small>
               ) : (
-                <small>{photo.caption}</small>
+                {photo.caption && <small>{photo.caption}</small>}
               )}
             </figcaption>
           </figure>
