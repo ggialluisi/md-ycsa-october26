@@ -389,3 +389,23 @@
     min-height:380px;
   }
 }
+
+/* Desktop-only framing for lead gallery photo */
+@media(min-width:851px){
+  .photo-card.wide{
+    min-height:420px;
+    aspect-ratio:16/9;
+  }
+  .photo-card.wide img{
+    object-fit:contain;
+    object-position:center center;
+    background:#0b0b0f;
+  }
+}
+
+/* Keep existing mobile crop behavior unchanged */
+@media(max-width:850px){
+  .photo-card.wide img{
+    object-fit:cover;
+  }
+}
