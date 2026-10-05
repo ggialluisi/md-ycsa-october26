@@ -73,7 +73,7 @@ export function PhotoGallery() {
                   nos teclados completa a formação atual
                 </small>
               ) : (
-                {photo.caption && <small>{photo.caption}</small>}
+                photo.caption ? <small>{photo.caption}</small> : null
               )}
             </figcaption>
           </figure>
