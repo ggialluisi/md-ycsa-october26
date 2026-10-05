@@ -1,27 +1,39 @@
 const PHOTOS = [
   {
+    src: "/md-ycsa-october26/images/mdeow.jpeg",
+    label: "Mari Dias & Os Waldorfs",
+    caption: "Novo registro da banda.",
+    variant: "wide",
+  },
+  {
+    src: "/md-ycsa-october26/images/pos-show.jpeg",
+    label: "Pós-show",
+    caption: "Registro pós-show.",
+    variant: "featured",
+  },
+  {
     src: "/md-ycsa-october26/images/show-pista.jpg",
     label: "Pista cheia",
     caption: "Mari Dias & Os Waldorfs no meio da festa.",
-    featured: true,
+    variant: "default",
   },
   {
     src: "/md-ycsa-october26/images/mari-sax.jpg",
     label: "Confirmada: Simone Julian",
     caption: "Super musicista nos sopros!",
-    featured: false,
+    variant: "default",
   },
   {
     src: "/md-ycsa-october26/images/mari-chapeu.jpg",
     label: "Mari no clima",
     caption: "Um registro leve antes do show.",
-    featured: false,
+    variant: "default",
   },
   {
     src: "/md-ycsa-october26/images/show-geral.jpg",
     label: "Show geral",
     caption: "A banda tocando para a pista.",
-    featured: false,
+    variant: "default",
   },
 ] as const;
 
@@ -37,7 +49,7 @@ export function PhotoGallery() {
       <div className="photo-grid">
         {PHOTOS.map((photo) => (
           <figure
-            className={photo.featured ? "photo-card featured" : "photo-card"}
+            className={`photo-card ${photo.variant === "default" ? "" : photo.variant}`}
             key={photo.src}
           >
             <img src={photo.src} alt={photo.label} loading="lazy" />
