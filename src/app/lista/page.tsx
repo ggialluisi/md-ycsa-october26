@@ -68,6 +68,11 @@ export default function ListPage() {
       return;
     }
 
+    if (people.some((person) => !person.hasNoCpf && !person.cpf)) {
+      setMessage("Para adultos, informe o CPF. Se for uma criança sem CPF, marque a opção correspondente.");
+      return;
+    }
+
     if (people.some((person) => !person.hasNoCpf && person.cpf && !isValidCpf(person.cpf))) {
       setMessage("Revise os CPFs sinalizados antes de enviar.");
       return;
@@ -93,8 +98,8 @@ export default function ListPage() {
       <p className="eyebrow">LISTA DA BANDA</p>
       <h1>Quem vai com você?</h1>
       <p>
-        Inclua adultos e crianças. CPF é opcional; quando informado, precisa ser válido.
-        Na portaria, diga que os nomes estão na <b>LISTA DA BANDA</b>.
+        Inclua adultos e crianças. Para adultos, informe o CPF: ele pode ser solicitado na portaria.
+        Crianças sem CPF podem ser incluídas normalmente. Na entrada, diga que os nomes estão na <b>LISTA DA BANDA</b>.
       </p>
 
       <form onSubmit={submit} className="people-form">
@@ -138,8 +143,14 @@ export default function ListPage() {
                   checked={Boolean(row.hasNoCpf)}
                   onChange={(event) => update(row.localId, { hasNoCpf: event.target.checked, cpf: "" })}
                 />
-                Não tem CPF
+                Criança sem CPF
               </label>
+
+              {row.hasNoCpf && (
+                <p className="cpf-note">
+                  Tudo certo para crianças. Para adultos, pedimos que o CPF seja informado, pois ele pode ser solicitado na portaria e a falta dele pode dificultar a entrada.
+                </p>
+              )}
 
               {rows.length > 1 && (
                 <button type="button" className="text-button" onClick={() => remove(row.localId)}>
