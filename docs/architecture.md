@@ -10,7 +10,7 @@ Público: total agregado, estado da inscrição, prazo e conteúdo institucional
 
 ## Regras
 
-- fechamento em 24/11/2026 09:00 America/Sao_Paulo, também no backend;
+- fechamento em 24/10/2026 09:00 America/Sao_Paulo, também no backend;
 - CPF opcional e válido quando informado;
 - duplicidade por nome normalizado OU CPF;
 - sem CPF, nome normalizado é a chave;
