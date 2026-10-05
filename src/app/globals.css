@@ -272,3 +272,20 @@
       0 1px 3px rgba(0,0,0,1);
   }
 }
+
+/* Lower hero copy further */
+.hero-content{
+  transform:translateY(4.6em);
+}
+
+@media(max-width:850px){
+  .hero-content{
+    transform:translateY(5.4em);
+  }
+}
+
+@media(max-width:720px){
+  .hero-content{
+    transform:translateY(6em);
+  }
+}
