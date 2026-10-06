@@ -107,8 +107,8 @@ export default function AdminPage() {
     return (
       <main className="section admin-login">
         <p className="eyebrow">ÁREA RESTRITA</p>
-        <h1>Apenas o GUBA tem acesso...</h1>
-        <p>Entre com a conta Google autorizada para consultar a lista completa.</p>
+        <h1>Só o GUBA tem acesso...</h1>
+        <p></p>
         {error && <p className="message" role="status">{error}</p>}
         <div id="google-signin" />
       </main>
