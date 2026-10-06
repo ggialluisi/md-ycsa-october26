@@ -66,7 +66,7 @@ export default function Home() {
         <article className="info-card accent-card">
           <span className="info-number">03</span>
           <h2>Na portaria, diga “LISTA DA BANDA”.</h2>
-          <p>É essa frase que identifica os nomes enviados por aqui.</p>
+          
         </article>
       </section>
 
