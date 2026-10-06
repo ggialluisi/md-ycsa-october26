@@ -56,7 +56,7 @@ export default function Home() {
         <article className="info-card">
           <span className="info-number">01</span>
           <h2>Inclua todo mundo.</h2>
-          <p>Adultos e crianças precisam estar na lista. Você pode adicionar várias pessoas de uma vez.</p>
+          <p>Adultos e crianças precisam estar na lista. Você pode adicionar várias pessoas de uma vez. A entrada é franca para sócios e convidados. Lá dentro, cada um paga apenas o que consumir, com comida alemã e chopp à vontade para escolher.</p>
         </article>
         <article className="info-card">
           <span className="info-number">02</span>
