@@ -425,3 +425,26 @@
     transform:scale(.965);
   }
 }
+
+/* Mobile: keep photo-band card below hero action buttons */
+@media(max-width:850px){
+  .hero-content{
+    position:relative;
+    z-index:3;
+  }
+  .hero .actions{
+    position:relative;
+    z-index:4;
+  }
+  .hero-photo-link{
+    position:relative !important;
+    inset:auto !important;
+    z-index:2;
+    margin-top:72px !important;
+  }
+}
+@media(max-width:720px){
+  .hero-photo-link{
+    margin-top:80px !important;
+  }
+}
