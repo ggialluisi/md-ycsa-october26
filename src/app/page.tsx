@@ -110,6 +110,7 @@ export default function Home() {
         <div className="link-stack">
           <a href={EVENT.bandInstagram} target="_blank" rel="noreferrer">Instagram de Mari Dias & Os Waldorfs ↗</a>
           <a href={EVENT.clubInstagram} target="_blank" rel="noreferrer">Instagram do Yacht Club Santo Amaro ↗</a>
+          <a href="https://www.instagram.com/andre_nfoto/" target="_blank" rel="noreferrer">Instagram do fotógrafo André N. ↗</a>
         </div>
       </section>
 
