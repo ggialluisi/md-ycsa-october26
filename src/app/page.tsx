@@ -53,20 +53,36 @@ export default function Home() {
       </section>
 
       <section className="section info-grid">
-        <article className="info-card">
+        <a
+          className="info-card route-card"
+          href="https://waze.com/ul/h6gyc2cj3w"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Abrir rota para o YCSA no Waze"
+        >
           <span className="info-number">01</span>
+          <div className="route-art" aria-hidden="true">
+            <span className="route-pin">●</span>
+            <span className="route-line">⌁</span>
+            <span className="route-car">➜</span>
+          </div>
+          <h2>Como chegar ao YCSA.</h2>
+          <p>Abra a rota direto no Waze e venha sem erro.</p>
+          <strong className="route-link">Abrir no Waze ↗</strong>
+        </a>
+        <article className="info-card">
+          <span className="info-number">02</span>
           <h2>Inclua todo mundo.</h2>
           <p>Adultos e crianças precisam estar na lista. Você pode adicionar várias pessoas de uma vez. A entrada é franca para sócios e convidados. Lá dentro, cada um paga apenas o que consumir, com comida alemã e chopp à vontade para escolher.</p>
         </article>
         <article className="info-card">
-          <span className="info-number">02</span>
+          <span className="info-number">03</span>
           <h2>CPF para adultos.</h2>
           <p>Para adultos, informe o CPF: ele pode ser solicitado na portaria. Crianças sem CPF podem ser incluídas normalmente.</p>
         </article>
         <article className="info-card accent-card">
-          <span className="info-number">03</span>
+          <span className="info-number">04</span>
           <h2>Na portaria, diga “LISTA DA BANDA”.</h2>
-          
         </article>
       </section>
 
@@ -96,10 +112,12 @@ export default function Home() {
       </section>
 
       <section className="section final-cta">
-        <p className="eyebrow">ÚLTIMA CHAMADA</p>
-        <h2>Seu nome na Lista da Banda.</h2>
-        <p>Garanta os nomes antes do encerramento da lista.</p>
-        <Link className="button primary" href="/lista/">Colocar nomes na lista</Link>
+        <div className="final-cta-inner">
+          <p className="eyebrow">ÚLTIMA CHAMADA</p>
+          <h2>Seu nome na Lista da Banda.</h2>
+          <p>Garanta os nomes antes do encerramento da lista.</p>
+          <Link className="button primary final-cta-button" href="/lista/">Colocar nomes na lista</Link>
+        </div>
       </section>
 
       <section className="section links-section">
