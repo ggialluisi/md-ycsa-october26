@@ -680,3 +680,52 @@
 .final-cta-button:hover{
   background:#2a170c;
 }
+
+
+/* Authoritative final CTA: same orange gradient language as primary button */
+.final-cta{
+  max-width:1112px;
+  margin:72px auto;
+  padding:0;
+  border:0;
+  border-radius:32px;
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--accent),var(--accent-soft));
+  box-shadow:0 24px 70px rgba(255,138,61,.28);
+}
+.final-cta::before{
+  display:none;
+}
+.final-cta-inner{
+  max-width:860px;
+  margin:0 auto;
+  padding:64px 36px;
+  text-align:center;
+}
+.final-cta .eyebrow,
+.final-cta h2,
+.final-cta p:not(.eyebrow){
+  color:#1d1008;
+}
+.final-cta .eyebrow{
+  opacity:.72;
+}
+.final-cta p:not(.eyebrow){
+  margin-left:auto;
+  margin-right:auto;
+}
+.final-cta-button{
+  background:#1d1008;
+  color:#fff7ef;
+  border-color:transparent;
+  box-shadow:0 14px 34px rgba(29,16,8,.22);
+}
+@media(max-width:720px){
+  .final-cta{
+    margin:48px 12px;
+    border-radius:26px;
+  }
+  .final-cta-inner{
+    padding:44px 20px;
+  }
+}
