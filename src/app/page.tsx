@@ -55,7 +55,7 @@ export default function Home() {
       <section className="section info-grid">
         <a
           className="info-card route-card"
-          href="https://waze.com/ul/h6gyc2cj3w"
+          href="waze://?q=Yacht%20Club%20Santo%20Amaro%2C%20S%C3%A3o%20Paulo&navigate=yes"
           target="_blank"
           rel="noreferrer"
           aria-label="Abrir rota para o YCSA no Waze"
