@@ -655,3 +655,28 @@
     width:100%;
   }
 }
+
+/* Make final CTA unmistakably visible */
+.final-cta::before{
+  background:
+    linear-gradient(135deg,#ff8a3d 0%,#ff9e52 48%,#ffb36b 100%);
+  border-color:rgba(255,255,255,.22);
+  box-shadow:
+    0 28px 80px rgba(255,138,61,.30),
+    inset 0 1px 0 rgba(255,255,255,.28);
+}
+.final-cta .eyebrow,
+.final-cta h2,
+.final-cta p:not(.eyebrow){
+  color:#1d1008;
+  text-shadow:none;
+}
+.final-cta-button{
+  background:#1d1008;
+  color:#fff7ef;
+  border-color:rgba(29,16,8,.15);
+  box-shadow:0 14px 34px rgba(29,16,8,.22);
+}
+.final-cta-button:hover{
+  background:#2a170c;
+}
