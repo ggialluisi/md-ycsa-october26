@@ -17,7 +17,7 @@ export function PublicSummary() {
   return (
     <div className="public-total">
       <strong className="big-number">{playfulTotal === null ? "—" : playfulTotal}</strong>
-      <small className="minus-seven-hundred">menos setecentos</small>
+      <small className="minus-seven-hundred">menos setecentas</small>
     </div>
   );
 }
