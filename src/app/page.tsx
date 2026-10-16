@@ -46,7 +46,7 @@ export default function Home() {
       <section className="metric-wrap">
         <div className="section metric">
           <p className="eyebrow">LISTA DA BANDA</p>
-          <p>Já estão confirmados</p>
+          <p>Já estão confirmadas</p>
           <PublicSummary />
           <span className="people-label">pessoas</span>
         </div>
