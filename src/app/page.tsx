@@ -48,7 +48,7 @@ export default function Home() {
           <p className="eyebrow">LISTA DA BANDA</p>
           <p>Já estão confirmados</p>
           <PublicSummary />
-          <span>pessoas</span>
+          <span className="people-label">pessoas</span>
         </div>
       </section>
 
