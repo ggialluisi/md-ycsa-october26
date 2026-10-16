@@ -12,5 +12,12 @@ export function PublicSummary() {
       .catch(() => setTotal(null));
   }, []);
 
-  return <strong className="big-number">{total === null ? "—" : total}</strong>;
+  const playfulTotal = total === null ? null : total + 700;
+
+  return (
+    <div className="public-total">
+      <strong className="big-number">{playfulTotal === null ? "—" : playfulTotal}</strong>
+      <small className="minus-seven-hundred">menos setecentos</small>
+    </div>
+  );
 }
