@@ -746,3 +746,27 @@
   border-color:transparent;
   box-shadow:0 18px 52px rgba(255,138,61,.40);
 }
+
+
+/* Playful public total */
+.public-total{
+  display:grid;
+  justify-items:center;
+  gap:4px;
+}
+.minus-seven-hundred{
+  margin-top:2px;
+  color:rgba(246,239,232,.42);
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:lowercase;
+}
+.metric .people-label{
+  display:block;
+  margin-top:8px;
+  color:var(--text);
+  font-size:clamp(1.4rem,3vw,2.1rem);
+  font-weight:850;
+  letter-spacing:-.02em;
+}
