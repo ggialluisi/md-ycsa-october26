@@ -90,7 +90,7 @@ export default function AdminPage() {
       [...people].sort((a, b) =>
         order === "alpha"
           ? a.name.localeCompare(b.name, "pt-BR")
-          : new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
+          : new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
       ),
     [people, order],
   );
