@@ -51,7 +51,7 @@ export default function ListPage() {
     setMessage("");
 
     if (closed) {
-      setMessage("A lista foi encerrada às 9h do dia do evento.");
+      setMessage("A lista foi encerrada às 22h do dia 23/10.");
       return;
     }
 
