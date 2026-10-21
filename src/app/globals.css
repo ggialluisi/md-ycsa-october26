@@ -1009,3 +1009,20 @@
     opacity:.82;
   }
 }
+
+
+/* Mobile: make fireworks more visible */
+@media(max-width:720px){
+  .metric-fireworks{
+    opacity:.96;
+  }
+  .metric-fireworks::after{
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(23,18,24,.05) 0%,
+        rgba(23,18,24,.10) 36%,
+        rgba(23,18,24,.22) 100%
+      );
+  }
+}
