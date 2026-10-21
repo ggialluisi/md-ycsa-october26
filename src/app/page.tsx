@@ -45,15 +45,11 @@ export default function Home() {
 
       <section className="metric-wrap">
         <div className="section metric">
-          <div className="metric-fireworks" aria-hidden="true">
-            <span className="firework firework-left" />
-            <span className="firework firework-right" />
-            <span className="firework firework-bottom" />
-          </div>
-          <p className="eyebrow">LISTA DA BANDA</p>
-          <p>Já estão confirmadas</p>
+          <div className="metric-fireworks" aria-hidden="true" />
+          <p className="metric-kicker">Temos já</p>
           <PublicSummary />
           <span className="people-label">pessoas</span>
+          <span className="metric-footer">na lista da banda</span>
         </div>
       </section>
 
