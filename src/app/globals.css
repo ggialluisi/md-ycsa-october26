@@ -770,3 +770,78 @@
   font-weight:850;
   letter-spacing:-.02em;
 }
+
+
+/* Festive public-total background */
+.metric{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.metric::before{
+  content:"";
+  position:absolute;
+  inset:-8%;
+  z-index:0;
+  pointer-events:none;
+  background:
+    repeating-conic-gradient(
+      from 0deg at 22% 30%,
+      rgba(255,179,107,.34) 0deg 1.2deg,
+      transparent 1.2deg 12deg
+    ),
+    repeating-conic-gradient(
+      from 4deg at 78% 27%,
+      rgba(255,138,61,.30) 0deg 1deg,
+      transparent 1deg 11deg
+    ),
+    repeating-conic-gradient(
+      from 8deg at 50% 76%,
+      rgba(255,208,140,.22) 0deg 1deg,
+      transparent 1deg 14deg
+    ),
+    radial-gradient(circle at 22% 30%,rgba(255,179,107,.26) 0 2%,transparent 2.6%),
+    radial-gradient(circle at 78% 27%,rgba(255,138,61,.24) 0 2%,transparent 2.6%),
+    radial-gradient(circle at 50% 76%,rgba(255,208,140,.20) 0 1.8%,transparent 2.4%);
+  -webkit-mask-image:
+    radial-gradient(circle at 22% 30%,#000 0 17%,transparent 18%),
+    radial-gradient(circle at 78% 27%,#000 0 17%,transparent 18%),
+    radial-gradient(circle at 50% 76%,#000 0 14%,transparent 15%);
+  mask-image:
+    radial-gradient(circle at 22% 30%,#000 0 17%,transparent 18%),
+    radial-gradient(circle at 78% 27%,#000 0 17%,transparent 18%),
+    radial-gradient(circle at 50% 76%,#000 0 14%,transparent 15%);
+  opacity:.72;
+  filter:drop-shadow(0 0 8px rgba(255,138,61,.16));
+}
+.metric::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 22% 30%,rgba(255,179,107,.16),transparent 18%),
+    radial-gradient(circle at 78% 27%,rgba(255,138,61,.14),transparent 18%),
+    radial-gradient(circle at 50% 76%,rgba(255,208,140,.10),transparent 15%);
+}
+.metric > *{
+  position:relative;
+  z-index:1;
+}
+.public-total{
+  display:grid;
+  justify-items:center;
+  gap:2px;
+}
+.metric .people-label{
+  display:block;
+  margin-top:8px;
+  color:var(--text);
+  font-size:clamp(1.4rem,3vw,2.1rem);
+  font-weight:850;
+  letter-spacing:-.02em;
+}
+.minus-seven-hundred{
+  display:none;
+}
