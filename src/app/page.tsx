@@ -111,6 +111,13 @@ export default function Home() {
               <p>A banda sobe ao palco para fechar a tarde com música.</p>
             </div>
           </article>
+          <article>
+            <time>19:00</time>
+            <div>
+              <strong>DJ Cris Siqueira</strong>
+              <p>After confirmado com pista em alta.</p>
+            </div>
+          </article>
         </div>
       </section>
 
