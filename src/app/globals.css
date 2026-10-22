@@ -1080,3 +1080,31 @@
     grid-column:2 / span 2;
   }
 }
+
+
+/* Desktop gallery: rebalance lower row to ~1.25/3 and ~1.75/3 */
+@media(min-width:851px){
+  .photo-grid{
+    grid-template-columns:minmax(0,1.25fr) minmax(0,.875fr) minmax(0,.875fr);
+  }
+
+  .photo-card.wide,
+  .photo-card.finale{
+    grid-column:1 / -1;
+  }
+
+  .photo-card.featured{
+    grid-column:1 / span 2;
+    grid-row:span 2;
+  }
+
+  .photo-card.portrait{
+    grid-column:1;
+    grid-row:span 2;
+  }
+
+  .photo-card.portrait + .photo-card,
+  .photo-card.portrait + .photo-card + .photo-card{
+    grid-column:2 / span 2;
+  }
+}
