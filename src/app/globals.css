@@ -1108,3 +1108,31 @@
     grid-column:2 / span 2;
   }
 }
+
+
+/* Desktop gallery: second composition 50/50 */
+@media(min-width:851px){
+  .photo-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .photo-card.wide,
+  .photo-card.finale{
+    grid-column:1 / -1;
+  }
+
+  .photo-card.featured{
+    grid-column:1;
+    grid-row:span 2;
+  }
+
+  .photo-card.portrait{
+    grid-column:1;
+    grid-row:span 2;
+  }
+
+  .photo-card.portrait + .photo-card,
+  .photo-card.portrait + .photo-card + .photo-card{
+    grid-column:2;
+  }
+}
