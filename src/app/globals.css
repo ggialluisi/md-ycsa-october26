@@ -1346,3 +1346,11 @@
     aspect-ratio:auto;
   }
 }
+
+
+/* DJ Cris: shift framing right to reveal more of her right arm */
+@media(min-width:851px){
+  .photo-card.after-wide img{
+    object-position:58% 18%;
+  }
+}
