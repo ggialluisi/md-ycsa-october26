@@ -12,7 +12,7 @@ export default function Home() {
         <div className="hero-glow" aria-hidden="true" />
         <p className="eyebrow hero-eyebrow">24 OUT · YCSA · SÃO PAULO</p>
         <div className="hero-content">
-          <h1>Mari Dias & Os Waldorfs na Octoberfest YCSA 2026 - feat DJ Cris Siqueira</h1>
+          <h1>Mari Dias & Os Waldorfs na Octoberfest YCSA 2026</h1>
           <p className="lead">
             Uma tarde de festa, comida típica e cerveja. Às 17h, Mari Dias & Os Waldorfs sobem ao palco.
           </p>
