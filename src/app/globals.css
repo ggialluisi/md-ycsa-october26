@@ -1170,3 +1170,16 @@
     grid-column:4 / span 3;
   }
 }
+
+
+/* DJ Cris portrait: slightly open framing on desktop */
+@media(min-width:851px){
+  .photo-card.portrait img{
+    object-fit:cover;
+    object-position:52% 18%;
+    transform:scale(.94);
+  }
+  .photo-card.portrait:hover img{
+    transform:scale(.96);
+  }
+}
