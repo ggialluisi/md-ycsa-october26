@@ -1026,3 +1026,26 @@
       );
   }
 }
+
+
+/* DJ Cris portrait card: taller on desktop to preserve framing */
+@media(min-width:851px){
+  .photo-card.portrait{
+    min-height:620px;
+    grid-row:span 2;
+  }
+  .photo-card.portrait img{
+    object-position:center 22%;
+  }
+}
+@media(max-width:850px){
+  .photo-card.portrait{
+    min-height:420px;
+    grid-row:auto;
+  }
+}
+@media(max-width:720px){
+  .photo-card.portrait{
+    min-height:320px;
+  }
+}
