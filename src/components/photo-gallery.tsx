@@ -24,22 +24,22 @@ const PHOTOS = [
     variant: "default",
   },
   {
-    src: "/md-ycsa-october26/images/cris-sunset-ii.jpg",
-    label: "After Confirmado",
-    caption: "super DJ @crissiqueiradj mantém o charme em alta na pista!",
-    variant: "portrait",
-  },
-  {
     src: "/md-ycsa-october26/images/mari-chapeu.jpg",
     label: "Mari no clima",
     caption: "Um registro leve antes do show.",
-    variant: "default",
+    variant: "mari-tall",
+  },
+  {
+    src: "/md-ycsa-october26/images/cris-sunset-ii.jpg",
+    label: "After Confirmado",
+    caption: "super DJ @crissiqueiradj mantém o charme em alta na pista!",
+    variant: "after-wide",
   },
   {
     src: "/md-ycsa-october26/images/show-geral.jpg",
     label: "Show geral",
     caption: "YCSA bombando",
-    variant: "default",
+    variant: "show-wide",
   },
   {
     src: "/md-ycsa-october26/images/mari.jpeg",
