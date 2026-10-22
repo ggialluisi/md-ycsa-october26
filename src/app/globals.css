@@ -1362,3 +1362,11 @@
     object-position:38% 18%;
   }
 }
+
+
+/* DJ Cris: shift crop further left to preserve more of her right arm */
+@media(min-width:851px){
+  .photo-card.after-wide img{
+    object-position:18% 18%;
+  }
+}
