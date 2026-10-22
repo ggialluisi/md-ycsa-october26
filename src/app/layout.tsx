@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mari Dias & Os Waldorfs na Octoberfest YCSA 26",
+  title: "Mari Dias & Os Waldorfs na Octoberfest YCSA 2026 - feat DJ Cris Siqueira",
   description: "Entre para a Lista da Banda e curta a Octoberfest YCSA 2026 com Mari Dias & Os Waldorfs.",
 };
 
