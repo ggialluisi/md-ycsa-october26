@@ -12,7 +12,7 @@ export default function Home() {
         <div className="hero-glow" aria-hidden="true" />
         <p className="eyebrow hero-eyebrow">24 OUT · YCSA · SÃO PAULO</p>
         <div className="hero-content">
-          <h1>Mari Dias & Os Waldorfs na Octoberfest YCSA 26</h1>
+          <h1>Mari Dias & Os Waldorfs na Octoberfest YCSA 2026 - feat DJ Cris Siqueira</h1>
           <p className="lead">
             Uma tarde de festa, comida típica e cerveja. Às 17h, Mari Dias & Os Waldorfs sobem ao palco.
           </p>
@@ -21,6 +21,7 @@ export default function Home() {
             <span>24 de outubro</span>
             <span>A partir das 13h</span>
             <span>Banda às 17h</span>
+            <span>DJ 19h</span>
           </div>
 
           <div className="actions">
@@ -130,6 +131,7 @@ export default function Home() {
         <div className="link-stack">
           <a href={EVENT.bandInstagram} target="_blank" rel="noreferrer">Instagram de Mari Dias & Os Waldorfs ↗</a>
           <a href={EVENT.clubInstagram} target="_blank" rel="noreferrer">Instagram do Yacht Club Santo Amaro ↗</a>
+          <a href="https://www.instagram.com/crissiqueiradj/" target="_blank" rel="noreferrer">Instagram da DJ Cris Siqueira ↗</a>
           <a href="https://www.instagram.com/andre_nfoto/" target="_blank" rel="noreferrer">Instagram do fotógrafo André N. ↗</a>
         </div>
       </section>
