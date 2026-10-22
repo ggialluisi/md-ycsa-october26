@@ -1183,3 +1183,17 @@
     transform:scale(.96);
   }
 }
+
+
+/* DJ Cris portrait: show full photo without crop or zoom */
+@media(min-width:851px){
+  .photo-card.portrait img{
+    object-fit:contain;
+    object-position:center center;
+    transform:none;
+    background:#0b0b0f;
+  }
+  .photo-card.portrait:hover img{
+    transform:none;
+  }
+}
