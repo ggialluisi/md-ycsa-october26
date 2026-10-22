@@ -24,6 +24,12 @@ const PHOTOS = [
     variant: "default",
   },
   {
+    src: "/md-ycsa-october26/images/cris-sunset.jpg",
+    label: "After Confirmado",
+    caption: "super DJ @crissiqueiradj mantém o charme em alta na pista!",
+    variant: "default",
+  },
+  {
     src: "/md-ycsa-october26/images/mari-chapeu.jpg",
     label: "Mari no clima",
     caption: "Um registro leve antes do show.",
@@ -71,6 +77,18 @@ export function PhotoGallery() {
                     @christokirma
                   </a>{" "}
                   nos teclados completa a formação atual
+                </small>
+              ) : photo.src.endsWith("cris-sunset.jpg") ? (
+                <small>
+                  super DJ{" "}
+                  <a
+                    href="https://www.instagram.com/crissiqueiradj/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    @crissiqueiradj
+                  </a>{" "}
+                  mantém o charme em alta na pista!
                 </small>
               ) : (
                 photo.caption ? <small>{photo.caption}</small> : null
