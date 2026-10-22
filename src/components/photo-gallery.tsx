@@ -24,7 +24,7 @@ const PHOTOS = [
     variant: "default",
   },
   {
-    src: "/md-ycsa-october26/images/cris-sunset.jpg",
+    src: "/md-ycsa-october26/images/cris-sunset-ii.jpg",
     label: "After Confirmado",
     caption: "super DJ @crissiqueiradj mantém o charme em alta na pista!",
     variant: "portrait",
@@ -78,7 +78,7 @@ export function PhotoGallery() {
                   </a>{" "}
                   nos teclados completa a formação atual
                 </small>
-              ) : photo.src.endsWith("cris-sunset.jpg") ? (
+              ) : photo.src.endsWith("cris-sunset-ii.jpg") ? (
                 <small>
                   super DJ{" "}
                   <a
