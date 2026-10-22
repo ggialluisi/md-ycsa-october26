@@ -1216,3 +1216,61 @@
     transform:scale(1.02);
   }
 }
+
+
+/* Desktop gallery trio:
+   left 1/3 = Mari no clima spanning two rows
+   right 2/3 = After Confirmado above Show geral */
+@media(min-width:851px){
+  .photo-card.mari-tall{
+    grid-column:1 / span 2;
+    grid-row:span 2;
+    min-height:620px;
+  }
+
+  .photo-card.after-wide{
+    grid-column:3 / span 4;
+    grid-row:auto;
+    min-height:300px;
+  }
+
+  .photo-card.show-wide{
+    grid-column:3 / span 4;
+    grid-row:auto;
+    min-height:300px;
+  }
+
+  .photo-card.after-wide img{
+    object-fit:contain;
+    object-position:center center;
+    transform:none;
+    background:#0b0b0f;
+  }
+
+  .photo-card.after-wide:hover img{
+    transform:scale(1.02);
+  }
+}
+
+@media(max-width:850px){
+  .photo-card.mari-tall,
+  .photo-card.after-wide,
+  .photo-card.show-wide{
+    grid-column:auto;
+    grid-row:auto;
+    min-height:420px;
+  }
+
+  .photo-card.after-wide img{
+    object-fit:cover;
+    transform:none;
+  }
+}
+
+@media(max-width:720px){
+  .photo-card.mari-tall,
+  .photo-card.after-wide,
+  .photo-card.show-wide{
+    min-height:320px;
+  }
+}
