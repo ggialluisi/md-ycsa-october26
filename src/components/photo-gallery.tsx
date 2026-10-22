@@ -27,7 +27,7 @@ const PHOTOS = [
     src: "/md-ycsa-october26/images/cris-sunset.jpg",
     label: "After Confirmado",
     caption: "super DJ @crissiqueiradj mantém o charme em alta na pista!",
-    variant: "default",
+    variant: "portrait",
   },
   {
     src: "/md-ycsa-october26/images/mari-chapeu.jpg",
