@@ -1197,22 +1197,3 @@
     transform:none;
   }
 }
-
-
-/* DJ Cris portrait: compact card, full image, subtle hover zoom */
-@media(min-width:851px){
-  .photo-card.portrait{
-    min-height:520px;
-    max-width:460px;
-    justify-self:start;
-  }
-  .photo-card.portrait img{
-    object-fit:contain;
-    object-position:center center;
-    transform:none;
-    background:#0b0b0f;
-  }
-  .photo-card.portrait:hover img{
-    transform:scale(1.02);
-  }
-}
