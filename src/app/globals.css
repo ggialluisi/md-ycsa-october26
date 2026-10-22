@@ -1274,3 +1274,17 @@
     min-height:320px;
   }
 }
+
+
+/* DJ Cris: crop intentionally for the new wide card */
+@media(min-width:851px){
+  .photo-card.after-wide img{
+    object-fit:cover;
+    object-position:center 24%;
+    transform:scale(1.03);
+    background:#0b0b0f;
+  }
+  .photo-card.after-wide:hover img{
+    transform:scale(1.05);
+  }
+}
