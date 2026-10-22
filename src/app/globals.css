@@ -1288,3 +1288,61 @@
     transform:scale(1.05);
   }
 }
+
+
+/* Desktop gallery trio — feature Mari + DJ equally, landscape show below */
+@media(min-width:851px){
+  .photo-card.mari-tall,
+  .photo-card.after-wide{
+    grid-column:auto;
+    grid-row:auto;
+    min-height:0;
+    aspect-ratio:4 / 5;
+  }
+
+  .photo-card.mari-tall{
+    grid-column:1 / span 3;
+  }
+
+  .photo-card.after-wide{
+    grid-column:4 / span 3;
+  }
+
+  .photo-card.show-wide{
+    grid-column:1 / -1;
+    grid-row:auto;
+    min-height:0;
+    aspect-ratio:16 / 7;
+  }
+
+  .photo-card.mari-tall img{
+    object-fit:cover;
+    object-position:center 28%;
+    transform:none;
+  }
+
+  .photo-card.after-wide img{
+    object-fit:cover;
+    object-position:center 18%;
+    transform:none;
+    background:#0b0b0f;
+  }
+
+  .photo-card.after-wide:hover img,
+  .photo-card.mari-tall:hover img{
+    transform:scale(1.025);
+  }
+
+  .photo-card.show-wide img{
+    object-fit:cover;
+    object-position:center 48%;
+  }
+}
+
+@media(max-width:850px){
+  .photo-card.mari-tall,
+  .photo-card.after-wide,
+  .photo-card.show-wide{
+    aspect-ratio:auto;
+  }
+}
