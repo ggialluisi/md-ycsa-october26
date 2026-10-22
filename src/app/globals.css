@@ -1197,3 +1197,22 @@
     transform:none;
   }
 }
+
+
+/* DJ Cris portrait: fit full image without crop, sized by image ratio */
+@media(min-width:851px){
+  .photo-card.portrait{
+    min-height:0;
+    aspect-ratio:1 / 1.12;
+    grid-row:auto;
+  }
+  .photo-card.portrait img{
+    object-fit:contain;
+    object-position:center center;
+    transform:none;
+    background:#0b0b0f;
+  }
+  .photo-card.portrait:hover img{
+    transform:scale(1.02);
+  }
+}
