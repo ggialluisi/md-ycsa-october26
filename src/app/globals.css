@@ -1170,16 +1170,3 @@
     grid-column:4 / span 3;
   }
 }
-
-
-/* DJ Cris portrait: slightly reduce crop to reveal more arm on desktop */
-@media(min-width:851px){
-  .photo-card.portrait img{
-    object-fit:cover;
-    object-position:center 22%;
-    transform:scale(.965);
-  }
-  .photo-card.portrait:hover img{
-    transform:scale(.985);
-  }
-}
