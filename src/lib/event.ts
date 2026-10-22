@@ -1,5 +1,5 @@
 export const EVENT = {
-  name: "Mari Dias & Os Waldorfs na Octoberfest YCSA 26",
+  name: "Mari Dias & Os Waldorfs na Octoberfest YCSA 2026 - feat DJ Cris Siqueira",
   dateLabel: "24 de outubro de 2026",
   startsAt: "13:00",
   bandAt: "17:00",
