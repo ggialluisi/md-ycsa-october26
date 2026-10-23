@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Countdown } from "@/components/countdown";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { PublicSummary } from "@/components/public-summary";
 import { EVENT } from "@/lib/event";
@@ -22,10 +21,11 @@ export default function Home() {
             <span>A partir das 13h</span>
             <span>Banda às 17h</span>
             <span>DJ 19h</span>
+            <span>Lista encerrada às 17h</span>
           </div>
 
           <div className="actions">
-            <Link className="button primary" href="/lista/">Entrar na Lista da Banda</Link>
+            <span className="button primary closed-button">Lista encerrada</span>
             <a className="button ghost" href={EVENT.officialPost} target="_blank" rel="noreferrer">
               Ver post oficial
             </a>
@@ -74,13 +74,13 @@ export default function Home() {
         </a>
         <article className="info-card">
           <span className="info-number">02</span>
-          <h2>Inclua todo mundo.</h2>
-          <p>Adultos e crianças precisam estar na lista. Você pode adicionar várias pessoas de uma vez. A entrada é franca para sócios e convidados. Lá dentro, cada um paga apenas o que consumir, com comida alemã e chopp à vontade para escolher.</p>
+          <h2>Lista encerrada.</h2>
+          <p>Obrigado a todo mundo que confirmou presença. A lista já foi fechada para organizarmos tudo com o clube.</p>
         </article>
         <article className="info-card">
           <span className="info-number">03</span>
-          <h2>CPF para adultos.</h2>
-          <p>Para adultos, informe o CPF: ele pode ser solicitado na portaria. Crianças sem CPF podem ser incluídas normalmente.</p>
+          <h2>Nos vemos no YCSA.</h2>
+          <p>Chegue cedo, curta a festa e, na portaria, diga que seu nome está na LISTA DA BANDA.</p>
         </article>
         <article className="info-card accent-card">
           <span className="info-number">04</span>
@@ -123,10 +123,17 @@ export default function Home() {
 
       <section className="section final-cta">
         <div className="final-cta-inner">
-          <p className="eyebrow">ÚLTIMA CHAMADA</p>
-          <h2>Seu nome na Lista da Banda.</h2>
-          <p>Garanta os nomes antes do encerramento da lista.</p>
-          <Link className="button primary final-cta-button" href="/lista/">Colocar nomes na lista</Link>
+          <p className="eyebrow">LISTA ENCERRADA</p>
+          <h2>Lista fechada. Agora é só curtir.</h2>
+          <p>Obrigado por confirmar com a gente. A Octoberfest YCSA acontece em 24 de outubro, a partir das 13h. Mari Dias & Os Waldorfs às 17h e DJ Cris Siqueira às 19h.</p>
+          <a
+            className="button primary final-cta-button"
+            href="waze://?q=Yacht%20Club%20Santo%20Amaro%2C%20S%C3%A3o%20Paulo&navigate=yes"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Abrir rota no Waze
+          </a>
         </div>
       </section>
 
@@ -144,10 +151,13 @@ export default function Home() {
       </section>
 
       <div className="sticky-cta">
-        <Link href="/lista/">
-          <b>Entrar na Lista da Banda</b>
-          <Countdown />
-        </Link>
+        <a
+          href="waze://?q=Yacht%20Club%20Santo%20Amaro%2C%20S%C3%A3o%20Paulo&navigate=yes"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <b>Nos vemos no YCSA · Abrir no Waze</b>
+        </a>
       </div>
 
       <footer>
