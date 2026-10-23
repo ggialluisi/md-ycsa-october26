@@ -32,7 +32,7 @@ function doPost(e) {
     }
 
     if (body.action === "submitPeople") {
-      if (!registrationOpen_()) return fail_("A lista foi encerrada às 22h do dia 23/10.");
+      if (!registrationOpen_()) return fail_("A lista foi encerrada antecipadamente às 17h do dia 23/10.");
       if (!Array.isArray(body.people) || !body.people.length) return fail_("Nenhuma pessoa informada.");
       return ok_(insertPeople_(body.people));
     }
